@@ -1,13 +1,20 @@
 
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
+  return knex('projectTasks').insert([
+    {
+      description: 'download dependencies',
+      notes: 'express, knex, splite3, nodemon, knex-cleaner',
+      projectId: 1
+    },
+    {
+      description: 'set-up server',
+      notes: '',
+      projectId: 1
+    },
+    {
+      description: 'create database',
+      notes: 'create knex migration tables',
+      projectId: 1
+    }
+  ]);
 };
