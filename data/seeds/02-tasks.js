@@ -1,6 +1,6 @@
 
 exports.seed = function(knex) {
-  return knex('projectTasks').insert([
+  return knex('tasks').insert([
     {
       description: 'download dependencies',
       notes: 'express, knex, splite3, nodemon, knex-cleaner',

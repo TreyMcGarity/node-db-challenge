@@ -7,7 +7,7 @@ exports.up = function(knex) {
               table.string('description', 128);
               table.integer('completed').defaultTo(0);
           })
-          .createTable('projectTasks', table => {
+          .createTable('tasks', table => {
               table.increments();
               table.string('description', 128).notNullable();
               table.string('notes', 128);              
